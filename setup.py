@@ -1,5 +1,29 @@
 from setuptools import setup, find_packages
 
+def get_install_requires():
+    return [
+        'numpy>=1.16.5',
+        'pandas',
+        'scipy',
+        'matplotlib',
+        'plotly>=4.12.0',
+        'ipywidgets>=7.0.0',
+        "numba>=0.53.1, <0.57.0; python_version<'3.10'",
+        "numba>=0.56.0, <0.57.0; python_version>='3.10' and python_version<'3.11'",
+        "numba>=0.57.0; python_version>='3.11'",
+        'dill',
+        'tqdm',
+        'dateparser',
+        'imageio',
+        'scikit-learn',
+        'schedule',
+        'requests',
+        'pytz',
+        'typing_extensions; python_version < "3.8"',
+        'mypy_extensions'
+    ]
+
+
 with open('README.md', 'r', encoding="utf-8", errors='ignore') as fh:
     long_description = fh.read()
 
